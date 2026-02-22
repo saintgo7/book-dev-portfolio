@@ -1,0 +1,283 @@
+/* ── Fortpolio e-book styles ── */
+
+:root {
+  --bg: #f9f6f1;
+  --surface: #ffffff;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --accent: #f59e0b;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --chapter-num: #cbd5e1;
+  --code-bg: #1e293b;
+  --code-text: #e2e8f0;
+  --radius: 10px;
+  --shadow: 0 4px 24px rgba(0,0,0,.08);
+  --max-w: 780px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* ── top bar ── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+header .logo {
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: .04em;
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav a {
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-size: .9rem;
+  margin-left: 1.5rem;
+  transition: color .2s;
+}
+header nav a:hover { color: #fff; }
+
+/* ── hero ── */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #0ea5e9 100%);
+  color: #fff;
+  text-align: center;
+  padding: 7rem 2rem 5rem;
+}
+
+.hero .badge {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 20px;
+  padding: .3rem .9rem;
+  font-family: 'Arial', sans-serif;
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: .6rem;
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  opacity: .85;
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+}
+
+.hero .meta {
+  font-family: 'Arial', sans-serif;
+  font-size: .9rem;
+  opacity: .7;
+}
+
+/* ── main layout ── */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+
+/* ── table of contents ── */
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 4rem;
+  box-shadow: var(--shadow);
+}
+
+.toc h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.toc ol {
+  list-style: none;
+  counter-reset: toc;
+}
+
+.toc ol li {
+  counter-increment: toc;
+  padding: .45rem 0;
+  border-bottom: 1px dashed var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+}
+
+.toc ol li:last-child { border-bottom: none; }
+
+.toc ol li::before {
+  content: counter(toc, decimal-leading-zero);
+  font-family: 'Arial', sans-serif;
+  font-size: .8rem;
+  color: var(--text-muted);
+  min-width: 2rem;
+}
+
+.toc ol li a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color .2s;
+}
+.toc ol li a:hover { color: var(--primary-dark); text-decoration: underline; }
+
+/* ── chapters ── */
+.chapter {
+  margin-bottom: 5rem;
+}
+
+.chapter-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.chapter-num {
+  font-family: 'Arial', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--chapter-num);
+  line-height: 1;
+  min-width: 3.5rem;
+}
+
+.chapter-header h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-top: .6rem;
+}
+
+.chapter p { margin-bottom: 1.2rem; color: var(--text); }
+.chapter p:last-child { margin-bottom: 0; }
+
+/* ── lists inside chapters ── */
+.chapter ul, .chapter ol {
+  margin: 1rem 0 1.2rem 1.5rem;
+}
+
+.chapter ul li, .chapter ol li {
+  margin-bottom: .4rem;
+}
+
+/* ── tip/quote boxes ── */
+.tip {
+  border-left: 4px solid var(--accent);
+  background: #fffbeb;
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1.5rem 0;
+  font-size: .95rem;
+}
+
+.tip strong { color: #92400e; }
+
+/* ── code blocks ── */
+pre {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  font-size: .88rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p code {
+  background: #e2e8f0;
+  color: #b91c1c;
+  padding: .1em .35em;
+  border-radius: 4px;
+  font-size: .88em;
+}
+
+/* ── section divider ── */
+.divider {
+  border: none;
+  border-top: 2px dashed var(--border);
+  margin: 4rem 0;
+}
+
+/* ── footer ── */
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: .85rem;
+  padding: 2.5rem 1rem;
+}
+
+footer strong { color: #fff; }
+
+/* ── back-to-top ── */
+.back-to-top {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: .6rem 1.4rem;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: 'Arial', sans-serif;
+  font-size: .9rem;
+  transition: background .2s;
+}
+.back-to-top:hover { background: var(--primary-dark); }
+
+/* ── responsive ── */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .hero { padding: 4rem 1.2rem 3rem; }
+  .chapter-num { font-size: 2.5rem; }
+  .chapter-header h2 { font-size: 1.5rem; }
+  main { padding: 2rem 1rem 4rem; }
+  header { padding: 0 1rem; }
+}

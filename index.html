@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fortpolio — The Developer Portfolio E-Book</title>
+  <meta name="description" content="Fortpolio: a practical e-book guide to building a standout developer portfolio from scratch." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── header ── -->
+  <header id="top">
+    <a class="logo" href="#top">📖 Fortpolio</a>
+    <nav>
+      <a href="#toc">Contents</a>
+      <a href="#ch1">Chapters</a>
+    </nav>
+  </header>
+
+  <!-- ── hero ── -->
+  <section class="hero">
+    <div class="badge">e-book · Developer Edition</div>
+    <h1>Fortpolio</h1>
+    <p class="subtitle">The complete guide to building a standout developer portfolio — from blank page to hired.</p>
+    <p class="meta">by Book Dev Portfolio · 2026 · First Edition</p>
+  </section>
+
+  <!-- ── main content ── -->
+  <main>
+
+    <!-- table of contents -->
+    <nav class="toc" id="toc" aria-label="Table of Contents">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#ch1">Why Every Developer Needs a Portfolio</a></li>
+        <li><a href="#ch2">Choosing Your Stack &amp; Tools</a></li>
+        <li><a href="#ch3">Crafting Your Personal Brand</a></li>
+        <li><a href="#ch4">Picking the Right Projects</a></li>
+        <li><a href="#ch5">Writing Project Case Studies</a></li>
+        <li><a href="#ch6">The Technical About Page</a></li>
+        <li><a href="#ch7">SEO &amp; Discoverability</a></li>
+        <li><a href="#ch8">Deploying &amp; Maintaining Your Portfolio</a></li>
+      </ol>
+    </nav>
+
+    <!-- chapter 1 -->
+    <article class="chapter" id="ch1">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">01</span>
+        <h2>Why Every Developer Needs a Portfolio</h2>
+      </div>
+      <p>
+        A résumé tells a hiring manager <em>what</em> you have done; a portfolio shows them
+        <em>how</em> you think. In a market flooded with bootcamp graduates and self-taught
+        developers, your portfolio is the single most effective way to stand out before you
+        ever reach a phone screen.
+      </p>
+      <p>
+        Think of your portfolio as a living document — one that grows with each project, each
+        lesson learned, and each technology mastered. Unlike a PDF that gathers dust in a
+        recruiter's downloads folder, a well-crafted web portfolio can attract inbound
+        interest from companies you haven't even applied to yet.
+      </p>
+      <div class="tip">
+        <strong>💡 Tip:</strong> Recruiters spend an average of <strong>7 seconds</strong> on a
+        résumé. A memorable portfolio URL on that résumé buys you minutes — not seconds.
+      </div>
+      <p>
+        Portfolios also serve as a forcing function for growth. The act of writing about your
+        projects, documenting decisions, and articulating trade-offs sharpens your engineering
+        thinking far more than leaving work undocumented.
+      </p>
+    </article>
+
+    <hr class="divider" />
+
+    <!-- chapter 2 -->
+    <article class="chapter" id="ch2">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">02</span>
+        <h2>Choosing Your Stack &amp; Tools</h2>
+      </div>
+      <p>
+        The best portfolio stack is the one you can ship <em>and maintain</em>. Resist the urge
+        to over-engineer. A clean, fast HTML/CSS/JavaScript site will outperform a half-finished
+        Next.js behemoth every time.
+      </p>
+      <p>Popular choices by developer type:</p>
+      <ul>
+        <li><strong>Frontend focus</strong> — React + Vite, or plain HTML with CSS custom properties</li>
+        <li><strong>Full-stack</strong> — Next.js, Remix, or SvelteKit deployed on Vercel / Netlify</li>
+        <li><strong>Backend / DevOps</strong> — A minimal static site; let your GitHub and blog do the talking</li>
+        <li><strong>Mobile</strong> — A React Native web app or a simple splash page linking to your App Store profiles</li>
+      </ul>
+      <div class="tip">
+        <strong>💡 Tip:</strong> Your portfolio is itself a project. Keep its
+        <code>README.md</code> up to date so visitors can see the code behind the site.
+      </div>
+      <pre><code># Example: bootstrap a portfolio with Vite
+npm create vite@latest my-portfolio -- --template vanilla
+cd my-portfolio
+npm install
+npm run dev</code></pre>
+    </article>
+
+    <hr class="divider" />
+
+    <!-- chapter 3 -->
+    <article class="chapter" id="ch3">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">03</span>
+        <h2>Crafting Your Personal Brand</h2>
+      </div>
+      <p>
+        Your personal brand is the consistent impression you leave across GitHub, LinkedIn,
+        Twitter / X, and your own site. Consistency does not mean boring — it means that
+        someone who discovers you on one platform instantly recognises you on another.
+      </p>
+      <p>Three pillars of a developer brand:</p>
+      <ol>
+        <li>
+          <strong>Voice</strong> — Are you the pragmatic problem-solver? The open-source
+          advocate? The performance nerd? Pick a lane and write with that voice.
+        </li>
+        <li>
+          <strong>Visual identity</strong> — A consistent avatar, one or two fonts, and a
+          colour palette you actually like. Tools like Coolors or Realtime Colors make this
+          trivial.
+        </li>
+        <li>
+          <strong>Niche</strong> — "Full-stack developer" is too broad. "Full-stack developer
+          who specialises in real-time data visualisation for fintech" is memorable.
+        </li>
+      </ol>
+      <div class="tip">
+        <strong>💡 Tip:</strong> Write your one-line bio in the third person, then rewrite it
+        in the first person. Use the version that feels most natural to say out loud.
+      </div>
+    </article>
+
+    <hr class="divider" />
+
+    <!-- chapter 4 -->
+    <article class="chapter" id="ch4">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">04</span>
+        <h2>Picking the Right Projects</h2>
+      </div>
+      <p>
+        Quality beats quantity. Three polished projects with thoughtful documentation will land
+        you more interviews than a graveyard of half-finished repos.
+      </p>
+      <p>
+        When evaluating whether a project belongs in your portfolio, ask:
+      </p>
+      <ul>
+        <li>Does it demonstrate a skill that is relevant to the roles I am targeting?</li>
+        <li>Can I articulate the <em>problem</em> it solves in one sentence?</li>
+        <li>Would I be comfortable discussing every line of code in an interview?</li>
+        <li>Is there a live demo or a compelling screenshot/gif I can show?</li>
+      </ul>
+      <p>
+        Avoid tutorial clones unless you have significantly extended the original. A to-do app
+        is fine if you added real-time sync, end-to-end encryption, and a custom offline mode.
+        A to-do app that stops at the tutorial checkpoint is not.
+      </p>
+      <div class="tip">
+        <strong>💡 Tip:</strong> Open-source contributions count. A well-scoped PR to a
+        popular repository signals that you can work in an unfamiliar codebase — exactly the
+        skill every team needs.
+      </div>
+    </article>
+
+    <hr class="divider" />
+
+    <!-- chapter 5 -->
+    <article class="chapter" id="ch5">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">05</span>
+        <h2>Writing Project Case Studies</h2>
+      </div>
+      <p>
+        A case study transforms a project card into a story. Instead of a screenshot and a list
+        of technologies, it gives the reader context, conflict, and resolution — the same
+        structure that makes a good engineering blog post.
+      </p>
+      <p>Use this template for each project:</p>
+      <ol>
+        <li><strong>Problem</strong> — What pain was this solving? For whom?</li>
+        <li><strong>Constraints</strong> — Time, team size, budget, or technical limitations.</li>
+        <li><strong>Approach</strong> — The key decisions and why you made them.</li>
+        <li><strong>Outcome</strong> — Metrics, usage numbers, or lessons learned.</li>
+      </ol>
+      <pre><code>## Project: RealFeed
+### Problem
+Teams using Slack lost important status updates in noisy channels.
+
+### Approach
+Built a webhook aggregator in Node.js with a React dashboard.
+Chose Server-Sent Events over WebSockets to reduce infra complexity.
+
+### Outcome
+Reduced "where is the deploy?" messages by ~60% in a 20-person team.</code></pre>
+    </article>
+
+    <hr class="divider" />
+
+    <!-- chapter 6 -->
+    <article class="chapter" id="ch6">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">06</span>
+        <h2>The Technical About Page</h2>
+      </div>
+      <p>
+        Your About page is not a biography — it is a pitch. Lead with the value you bring,
+        not with where you grew up.
+      </p>
+      <p>A strong technical About page contains:</p>
+      <ul>
+        <li>A one-paragraph professional summary targeting your ideal role</li>
+        <li>A concise skills list (technologies, not buzzwords)</li>
+        <li>A timeline of meaningful experience — including self-study and side-projects</li>
+        <li>A way to contact you (email, LinkedIn, GitHub) — make it obvious</li>
+      </ul>
+      <div class="tip">
+        <strong>💡 Tip:</strong> Add a <em>Currently learning</em> section. It shows
+        intellectual curiosity and gives recruiters a talking point beyond your résumé.
+      </div>
+    </article>
+
+    <hr class="divider" />
+
+    <!-- chapter 7 -->
+    <article class="chapter" id="ch7">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">07</span>
+        <h2>SEO &amp; Discoverability</h2>
+      </div>
+      <p>
+        You do not need to become an SEO expert, but a few straightforward practices will get
+        your portfolio indexed and surfaced when someone Googles your name or your niche.
+      </p>
+      <ul>
+        <li>Use a <code>&lt;title&gt;</code> tag that includes your name and role</li>
+        <li>Add <code>&lt;meta name="description"&gt;</code> to every page</li>
+        <li>Include an <code>og:image</code> so links to your site look great when shared</li>
+        <li>Submit your site to Google Search Console after launch</li>
+        <li>Write at least one blog post or case study with a long-tail keyword in the title</li>
+      </ul>
+      <pre><code>&lt;!-- Minimal SEO head tags --&gt;
+&lt;title&gt;Jane Doe · Frontend Engineer&lt;/title&gt;
+&lt;meta name="description"
+  content="Jane Doe builds accessible React applications. Open to remote roles." /&gt;
+&lt;meta property="og:title" content="Jane Doe · Frontend Engineer" /&gt;
+&lt;meta property="og:image" content="https://janedoe.dev/og.png" /&gt;</code></pre>
+    </article>
+
+    <hr class="divider" />
+
+    <!-- chapter 8 -->
+    <article class="chapter" id="ch8">
+      <div class="chapter-header">
+        <span class="chapter-num" aria-hidden="true">08</span>
+        <h2>Deploying &amp; Maintaining Your Portfolio</h2>
+      </div>
+      <p>
+        A portfolio that is never updated becomes a liability. Schedule a monthly
+        15-minute review: update the projects you are working on, refresh the
+        <em>Currently learning</em> section, and fix any broken links.
+      </p>
+      <p>Free deployment options worth considering:</p>
+      <ul>
+        <li><strong>GitHub Pages</strong> — Zero config for static sites; great for HTML/CSS/JS portfolios</li>
+        <li><strong>Vercel</strong> — Instant deploys from Git; ideal for Next.js or SvelteKit</li>
+        <li><strong>Netlify</strong> — Generous free tier with form handling and edge functions</li>
+        <li><strong>Cloudflare Pages</strong> — Fast global CDN, unlimited bandwidth on the free plan</li>
+      </ul>
+      <p>
+        Set up a custom domain as soon as possible. <code>yourname.dev</code> costs around
+        $12 a year and signals professionalism far beyond a <code>github.io</code> subdomain.
+      </p>
+      <div class="tip">
+        <strong>💡 Tip:</strong> Enable GitHub's dependabot or Renovate on your portfolio
+        repo so dependency updates don't silently pile up.
+      </div>
+
+      <a class="back-to-top" href="#top">↑ Back to top</a>
+    </article>
+
+  </main>
+
+  <!-- ── footer ── -->
+  <footer>
+    <p><strong>Fortpolio</strong> — The Developer Portfolio E-Book</p>
+    <p style="margin-top:.5rem">© 2026 Book Dev Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
