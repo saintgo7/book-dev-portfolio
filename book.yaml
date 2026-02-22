@@ -1,0 +1,65 @@
+title: "나의 개발 프로젝트 아카이브"
+subtitle: "SaaS · ERP · AI · 여행 · 헬스케어 개발 기록 2024-2026"
+author: "Ph.D SNT Go."
+language: ko
+date: "2026-02-22"
+version: "1.0.0"
+publisher: "Self-Published"
+isbn: ""
+license: "All Rights Reserved"
+
+# Book type: technical | academic | tutorial
+type: technical
+
+# Output settings
+output:
+  epub:
+    enabled: true
+    css: "assets/css/epub.css"
+    toc_depth: 3
+  pdf:
+    enabled: true
+    paper_size: "a4"
+    font_size: "11pt"
+    main_font: "Noto Serif CJK KR"
+    mono_font: "Andale Mono"
+    sans_font: "Noto Sans CJK KR"
+    margin: "2.5cm"
+    toc_depth: 3
+    line_numbers: true
+  html:
+    enabled: true
+    css: "assets/css/html.css"
+    toc_depth: 3
+    syntax_theme: "tango"
+
+chapters:
+  - chapters/00-preface.md
+  - chapters/01-abada-saas.md
+  - chapters/02-erp-mes.md
+  - chapters/03-travel-platform.md
+  - chapters/04-ai-bot.md
+  - chapters/05-email-communication.md
+  - chapters/06-healthcare.md
+  - chapters/07-web-projects.md
+  - chapters/08-devtools.md
+  - chapters/09-learning-experiments.md
+  - chapters/10-misc-archive.md
+  - chapters/11-appendix.md
+
+diagrams:
+  engine: "mermaid"
+  output_dir: "assets/images/generated"
+  format: "svg"
+  theme: "default"
+
+code:
+  default_language: "typescript"
+  line_numbers: true
+  highlight_theme: "tango"
+
+numbering:
+  figures: true
+  tables: true
+  equations: true
+  chapters: true

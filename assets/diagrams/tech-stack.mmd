@@ -1,0 +1,49 @@
+graph TD
+    subgraph Backend
+        GO[Go 1.22+]
+        PY[Python 3.11+]
+        TS[TypeScript 5.0]
+        NODE[Node.js 22]
+    end
+
+    subgraph Frontend
+        REACT[React 18]
+        NEXT[Next.js 14]
+        SVELTE[SvelteKit 2]
+        VUE[Vue 3]
+    end
+
+    subgraph Database
+        PG[(PostgreSQL 16)]
+        REDIS[(Redis 7)]
+        MONGO[(MongoDB)]
+        SUPA[(Supabase)]
+    end
+
+    subgraph AI
+        CLAUDE[Claude API]
+        GPT[OpenAI GPT]
+        CREW[CrewAI]
+        LANG[LangGraph]
+    end
+
+    subgraph Infra
+        DOCKER[Docker]
+        K8S[Kubernetes]
+        CF[Cloudflare]
+        GH[GitHub Actions]
+    end
+
+    GO --> PG
+    PY --> REDIS
+    TS --> PG
+    NODE --> MONGO
+    NEXT --> REACT
+    SVELTE --> PG
+    PY --> CLAUDE
+    PY --> GPT
+    PY --> CREW
+    CLAUDE --> LANG
+    DOCKER --> K8S
+    GH --> DOCKER
+    CF --> DOCKER

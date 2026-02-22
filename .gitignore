@@ -1,0 +1,13 @@
+# Build output
+output/
+
+# Diagram cache
+.diagram-cache/
+.processed-chapters/
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
